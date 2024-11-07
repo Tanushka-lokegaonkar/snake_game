@@ -47,7 +47,7 @@ function showLoginPopup() {
     
 }
 
-function submitScore() {
+function saveScore() {
     const userId = document.getElementById("userId").value;
     const password = document.getElementById("password").value;
     
@@ -56,17 +56,18 @@ function submitScore() {
         return;
     }
 
-    fetch('http://localhost:5000/api/save_score', {
+    fetch('https://gaming-portal-be-seven.vercel.app/score', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            userId: userId,
-            password: password,
             score: score,
-            gameName: "snake"
-        })
+            userId: userId,
+            game: "snake",
+            password: password   
+        }),
+        mode: 'cors'
     })
     .then(response => response.json())
     .then(data => {
