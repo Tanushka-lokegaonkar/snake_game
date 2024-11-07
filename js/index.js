@@ -73,6 +73,7 @@ function saveScore() {
     .then(data => {
         alert(data.message);
         document.getElementById("loginPopup").style.display = "none";
+        window.location.href = "https://portal-frontend-six.vercel.app/"
         gameStarted = true; 
     })
     .catch(error => console.error("Error:", error));
