@@ -65,7 +65,7 @@ function submitScore() {
             userId: userId,
             password: password,
             score: score,
-            gameName: "snakegame"
+            gameName: "snake"
         })
     })
     .then(response => response.json())
@@ -103,10 +103,9 @@ function gameEngine(){
         inputDir =  {x: 0, y: 0}; 
         alert("Game Over. Your score: " + score);
         showLoginPopup();
-        //submitScore();
         snakeArr = [{x: 13, y: 15}];
         musicSound.play();
-        score = 0; 
+        // score = 0; 
     }
 
     if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
