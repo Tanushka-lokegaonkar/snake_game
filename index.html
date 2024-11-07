@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snakegame</title>
+    <title>Snake game</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,6 +12,16 @@
         <div id="scoreBox">Score: 0</div>
         <div id="hiscoreBox">HiScore: 0</div>
         <div id="board"></div>
+    </div>
+
+    <div id="loginPopup" class="popup">
+        <h2>Submit Your Score</h2>
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button onclick="submitScore()">Submit Score</button>
+        <button onclick="restartGame()">Restart Game</button> 
     </div>
 </body>
 <script src="js/index.js"></script>
